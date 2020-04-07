@@ -1,5 +1,6 @@
 import random
 
+
 def sequential_search(list_to_search, item):
     position = 0
     found = False
@@ -10,4 +11,13 @@ def sequential_search(list_to_search, item):
         else:
             position += 1
 
-    return found, position
+    return found, item, position
+
+
+list_to_search = []
+item = random.randint(0, 100)
+
+for _ in range(100):
+    list_to_search.append(random.randint(0, 100))
+
+print(sequential_search(list_to_search, item))
